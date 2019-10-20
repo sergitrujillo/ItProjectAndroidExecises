@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/myMargin"
+        android:text="@string/temperature"
+        android:textColor="@color/colorAccent" />
+
+    <EditText
+        android:id="@+id/etTemperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:inputType="numberDecimal"
+        android:textColor="@color/color_white" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rbCelsius"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_white"
+                android:text="@string/celsius" />
+
+            <RadioButton
+                android:id="@+id/rbFahrenheit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_white"
+                android:text="@string/fahrenheit" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btCalculate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/calculate" />
+    </LinearLayout>
+
+
+</LinearLayout>

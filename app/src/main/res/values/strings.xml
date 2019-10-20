@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">IT Sample app</string>
     <string name="test_hello">Hello World</string>
+    <string name="temperature">TEMPERATURE</string>
+    <string name="celsius">Celsius</string>
+    <string name="fahrenheit">Fahrenheit</string>
+    <string name="calculate">Calculate</string>
 </resources>
