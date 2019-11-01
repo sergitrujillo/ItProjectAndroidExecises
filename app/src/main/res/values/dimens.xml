@@ -2,4 +2,5 @@
 <resources>
     <dimen name="myText">16sp</dimen>
     <dimen name="myMargin">18dp</dimen>
+    <dimen name="list_item_margin">4dp</dimen>
 </resources>

@@ -11,13 +11,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainIntentsActivity"></activity>
+        <activity android:name=".UserActivity"/>
+        <activity android:name=".AdaptersActivity" />
+        <activity android:name=".MainIntentsActivity" />
         <activity android:name=".GetNumberActivity" />
         <activity android:name=".MessageActivity" />
         <activity android:name=".MessageObjActivity" />
         <activity android:name=".SendMessageActivity" />
         <activity android:name=".SendMessageObjActivity" />
-        <activity android:name=".AdaptersActivity">
+        <activity android:name=".MyAdapterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
