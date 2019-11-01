@@ -1,7 +1,10 @@
 package cat.udl.itproject.itsampleapp;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.Intent;
@@ -11,11 +14,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
 
+import java.security.Permissions;
+
 public class MainIntentsActivity extends AppCompatActivity {
 
     public static final String EXTRA_NUMBER = "cat.udl.itproject.itsampleapp.NUMBER";
-    public static final int REQUETST_CODE_1 = 1;
-    public static final int REQUETST_CODE_2 = 2;
+    public static final int REQUEST_CODE_1 = 1;
+    public static final int REQUEST_CODE_2 = 2;
+    public static final int REQUEST_PERMISSIONCALL = 3;
 
 
     @Override
@@ -36,12 +42,12 @@ public class MainIntentsActivity extends AppCompatActivity {
 
     public void sendOutput1(View view) {
         Intent intent = new Intent(getApplicationContext(), GetNumberActivity.class);
-        startActivityForResult(intent, REQUETST_CODE_1);
+        startActivityForResult(intent, REQUEST_CODE_1);
     }
 
     public void sendOutput2(View view) {
         Intent intent = new Intent(getApplicationContext(), GetNumberActivity.class);
-        startActivityForResult(intent, REQUETST_CODE_2);
+        startActivityForResult(intent, REQUEST_CODE_2);
     }
 
 
@@ -54,10 +60,10 @@ public class MainIntentsActivity extends AppCompatActivity {
             int number = data.getIntExtra(EXTRA_NUMBER, 0);
             String message;
             switch (requestCode) {
-                case REQUETST_CODE_1:
+                case REQUEST_CODE_1:
                     message = getString(R.string.send) + " RQ1:" + number;
                     break;
-                case REQUETST_CODE_2:
+                case REQUEST_CODE_2:
                     message = getString(R.string.send) + " RQ1:" + number;
                     break;
                 default:
@@ -80,22 +86,39 @@ public class MainIntentsActivity extends AppCompatActivity {
     }
 
     public void makePhoneCall(View view) {
+
+        int result = ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE);
+        if (result != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE}, REQUEST_PERMISSIONCALL);
+        } else {
+            callPhone();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode){
+            case REQUEST_PERMISSIONCALL:
+                if (grantResults.length>0 && grantResults[0] == PackageManager.PERMISSION_GRANTED ){
+                    callPhone();
+                }
+                break;
+        }
+    }
+
+    private void callPhone() {
         Intent intent = new Intent(Intent.ACTION_CALL);
         intent.setData(Uri.parse("tel:" + getString(R.string.dialNumber)));
-        if (intent.resolveActivity(getPackageManager()) != null) {
-
-            if (checkSelfPermission(Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(getBaseContext(), getString(R.string.noPermission), Toast.LENGTH_SHORT).show();
-                return;
-            }
+        int result = ContextCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE);
+        if (result != PackageManager.PERMISSION_GRANTED) {
             startActivity(intent);
-
         }
     }
 
     public void openUrlWeb(View view) {
         Uri webPage = Uri.parse(getString(R.string.androidWeb));
-        Intent intent = new Intent(Intent.ACTION_VIEW,webPage);
+        Intent intent = new Intent(Intent.ACTION_VIEW, webPage);
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
@@ -103,7 +126,7 @@ public class MainIntentsActivity extends AppCompatActivity {
 
     public void openMap(View view) {
         Uri geo = Uri.parse("geo:41.608945,0.6224863");
-        Intent intent = new Intent(Intent.ACTION_VIEW,geo);
+        Intent intent = new Intent(Intent.ACTION_VIEW, geo);
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
