@@ -21,4 +21,8 @@
     <string name="title">Title</string>
     <string name="content">Content</string>
     <string name="send_message_object">SEND MESSAGE (OBJECT)</string>
+    <string name="enter_a_number">Enter a number:</string>
+    <string name="cancel">CANCEL</string>
+    <string name="send_output_1">SEND OUTPUT 1</string>
+    <string name="send_output_2">SEND OUTPUT 2</string>
 </resources>

@@ -20,4 +20,16 @@
         android:layout_height="wrap_content"
         android:onClick="sendMessageObj"
         android:text="@string/send_message_object" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sendOutput1"
+        android:text="@string/send_output_1" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sendOutput2"
+        android:text="@string/send_output_2" />
 </LinearLayout>
