@@ -29,4 +29,6 @@
     <string name="dialNumber">112</string>
     <string name="make_phone_call">MAKE PHONE CALL</string>
     <string name="noPermission">No Permission</string>
+    <string name="openUrlWeb">OPEN URL WEB</string>
+    <string name="androidWeb">http://developer.android.com</string>
 </resources>

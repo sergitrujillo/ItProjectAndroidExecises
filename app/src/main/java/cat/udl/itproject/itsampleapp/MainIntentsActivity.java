@@ -92,4 +92,12 @@ public class MainIntentsActivity extends AppCompatActivity {
 
         }
     }
+
+    public void openUrlWeb(View view) {
+        Uri webPage = Uri.parse(getString(R.string.androidWeb));
+        Intent intent = new Intent(Intent.ACTION_VIEW,webPage);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
 }
