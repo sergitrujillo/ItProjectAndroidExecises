@@ -13,12 +13,20 @@
         android:text="@string/enter_a_message" />
 
     <EditText
-        android:id="@+id/etMessage"
+        android:id="@+id/etTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:layout_below="@id/textView"
+        android:hint="@string/title"/>
+    <EditText
+        android:id="@+id/etMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@id/etTitle"
         android:hint="@string/message"/>
 
     <Button

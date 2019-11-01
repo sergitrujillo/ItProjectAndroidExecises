@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.io.Serializable;
+
 public class MessageActivity extends AppCompatActivity {
 
     @Override
@@ -15,8 +17,10 @@ public class MessageActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         TextView tvMessage = findViewById(R.id.message);
-        if (intent.hasExtra(SendMessageActivity.EXTRA_MESSAGE)){
-            tvMessage.setText(intent.getStringExtra(SendMessageActivity.EXTRA_MESSAGE));
+        if (intent.hasExtra(SendMessageActivity.EXTRA_MESSAGE_OBJECT)) {
+
+            Message message = (Message) intent.getSerializableExtra(SendMessageActivity.EXTRA_MESSAGE_OBJECT);
+            tvMessage.setText(message.getmTitle() + " - " + message.getmContent());
         }
     }
 }
