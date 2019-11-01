@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MyAdapterActivity"></activity>
+        <activity android:name=".fragments.FragmentsActivity"></activity>
+        <activity android:name=".MyAdapterActivity" />
         <activity android:name=".UserActivity" />
         <activity android:name=".AdaptersActivity" />
         <activity android:name=".MainIntentsActivity" />
@@ -20,7 +21,7 @@
         <activity android:name=".MessageObjActivity" />
         <activity android:name=".SendMessageActivity" />
         <activity android:name=".SendMessageObjActivity" />
-        <activity android:name=".fragments.FragmentsActivity">
+        <activity android:name=".fragments.DinamicFragmentsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
