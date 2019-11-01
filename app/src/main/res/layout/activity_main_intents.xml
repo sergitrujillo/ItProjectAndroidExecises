@@ -51,4 +51,10 @@
         android:layout_height="wrap_content"
         android:onClick="openUrlWeb"
         android:text="@string/openUrlWeb" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="openMap"
+        android:text="@string/openMap" />
 </LinearLayout>

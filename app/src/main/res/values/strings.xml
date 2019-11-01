@@ -31,4 +31,5 @@
     <string name="noPermission">No Permission</string>
     <string name="openUrlWeb">OPEN URL WEB</string>
     <string name="androidWeb">http://developer.android.com</string>
+    <string name="openMap">OPEN MAP</string>
 </resources>

@@ -100,4 +100,12 @@ public class MainIntentsActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
+
+    public void openMap(View view) {
+        Uri geo = Uri.parse("geo:41.608945,0.6224863");
+        Intent intent = new Intent(Intent.ACTION_VIEW,geo);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+    }
 }
