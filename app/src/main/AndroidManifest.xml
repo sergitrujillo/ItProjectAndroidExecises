@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="cat.udl.itproject.itsampleapp" >
+    package="cat.udl.itproject.itsampleapp">
 
     <application
         android:allowBackup="true"
@@ -8,8 +8,8 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".TemperatureConverterActivity" >
+        android:theme="@style/AppTheme">
+        <activity android:name=".LivecycleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
