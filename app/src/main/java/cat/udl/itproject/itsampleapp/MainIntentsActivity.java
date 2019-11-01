@@ -4,6 +4,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -66,5 +67,13 @@ public class MainIntentsActivity extends AppCompatActivity {
             Toast.makeText(getBaseContext(), getString(R.string.cancel), Toast.LENGTH_SHORT).show();
         }
 
+    }
+
+    public void makePhoneDial(View view) {
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:"+getString(R.string.dialNumber)));
+        if (intent.resolveActivity(getPackageManager())!=null){
+            startActivity(intent);
+        }
     }
 }

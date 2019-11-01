@@ -25,4 +25,6 @@
     <string name="cancel">CANCEL</string>
     <string name="send_output_1">SEND OUTPUT 1</string>
     <string name="send_output_2">SEND OUTPUT 2</string>
+    <string name="make_phone_dial">MAKE PHONE DIAL</string>
+    <string name="dialNumber">112</string>
 </resources>

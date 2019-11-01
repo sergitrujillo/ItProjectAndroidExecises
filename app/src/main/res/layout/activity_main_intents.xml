@@ -32,4 +32,11 @@
         android:layout_height="wrap_content"
         android:onClick="sendOutput2"
         android:text="@string/send_output_2" />
+
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="makePhoneDial"
+        android:text="@string/make_phone_dial" />
 </LinearLayout>
