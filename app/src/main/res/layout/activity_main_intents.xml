@@ -39,4 +39,10 @@
         android:layout_height="wrap_content"
         android:onClick="makePhoneDial"
         android:text="@string/make_phone_dial" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="makePhoneCall"
+        android:text="@string/make_phone_call" />
 </LinearLayout>

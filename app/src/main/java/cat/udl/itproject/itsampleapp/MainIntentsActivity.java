@@ -3,7 +3,9 @@ package cat.udl.itproject.itsampleapp;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -63,7 +65,7 @@ public class MainIntentsActivity extends AppCompatActivity {
                     break;
             }
             Toast.makeText(getBaseContext(), message, Toast.LENGTH_SHORT).show();
-        }else{ // CANCEL
+        } else { // CANCEL
             Toast.makeText(getBaseContext(), getString(R.string.cancel), Toast.LENGTH_SHORT).show();
         }
 
@@ -71,9 +73,23 @@ public class MainIntentsActivity extends AppCompatActivity {
 
     public void makePhoneDial(View view) {
         Intent intent = new Intent(Intent.ACTION_DIAL);
-        intent.setData(Uri.parse("tel:"+getString(R.string.dialNumber)));
-        if (intent.resolveActivity(getPackageManager())!=null){
+        intent.setData(Uri.parse("tel:" + getString(R.string.dialNumber)));
+        if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
+        }
+    }
+
+    public void makePhoneCall(View view) {
+        Intent intent = new Intent(Intent.ACTION_CALL);
+        intent.setData(Uri.parse("tel:" + getString(R.string.dialNumber)));
+        if (intent.resolveActivity(getPackageManager()) != null) {
+
+            if (checkSelfPermission(Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(getBaseContext(), getString(R.string.noPermission), Toast.LENGTH_SHORT).show();
+                return;
+            }
+            startActivity(intent);
+
         }
     }
 }

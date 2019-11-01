@@ -27,4 +27,6 @@
     <string name="send_output_2">SEND OUTPUT 2</string>
     <string name="make_phone_dial">MAKE PHONE DIAL</string>
     <string name="dialNumber">112</string>
+    <string name="make_phone_call">MAKE PHONE CALL</string>
+    <string name="noPermission">No Permission</string>
 </resources>
