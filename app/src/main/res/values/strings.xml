@@ -14,4 +14,22 @@
     <string name="onPauseCallback">onPause Callback\n</string>
     <string name="onStopCallback">onStop Callback\n</string>
     <string name="onDestroyCallback">onDestroy Callback\n</string>
+    <string name="message">Message</string>
+    <string name="send">SEND</string>
+    <string name="enter_a_message">Enter a message:</string>
+    <string name="send_message">SEND MESSAGE</string>
+    <string name="title">Title</string>
+    <string name="content">Content</string>
+    <string name="send_message_object">SEND MESSAGE (OBJECT)</string>
+    <string name="enter_a_number">Enter a number:</string>
+    <string name="cancel">CANCEL</string>
+    <string name="send_output_1">SEND OUTPUT 1</string>
+    <string name="send_output_2">SEND OUTPUT 2</string>
+    <string name="make_phone_dial">MAKE PHONE DIAL</string>
+    <string name="dialNumber">112</string>
+    <string name="make_phone_call">MAKE PHONE CALL</string>
+    <string name="noPermission">No Permission</string>
+    <string name="openUrlWeb">OPEN URL WEB</string>
+    <string name="androidWeb">http://developer.android.com</string>
+    <string name="openMap">OPEN MAP</string>
 </resources>
