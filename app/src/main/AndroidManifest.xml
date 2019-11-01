@@ -10,7 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MessageActivity"></activity>
+        <activity android:name=".MessageObjActivity"></activity>
         <activity android:name=".SendMessageActivity" />
+        <activity android:name=".SendMessageObjActivity" />
         <activity android:name=".MainIntentsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

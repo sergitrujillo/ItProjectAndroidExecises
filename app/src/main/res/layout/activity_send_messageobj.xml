@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SendMessageActivity">
+    tools:context=".SendMessageObjActivity">
 
     <TextView
         android:id="@+id/textView"
@@ -13,13 +13,21 @@
         android:text="@string/enter_a_message" />
 
     <EditText
-        android:id="@+id/etMessage"
+        android:id="@+id/etTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
         android:layout_below="@id/textView"
-        android:hint="@string/message"/>
+        android:hint="@string/title"/>
+    <EditText
+        android:id="@+id/etMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@id/etTitle"
+        android:hint="@string/content"/>
 
     <Button
         android:id="@+id/button3"

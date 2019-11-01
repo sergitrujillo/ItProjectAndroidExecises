@@ -19,4 +19,6 @@
     <string name="enter_a_message">Enter a message:</string>
     <string name="send_message">SEND MESSAGE</string>
     <string name="title">Title</string>
+    <string name="content">Content</string>
+    <string name="send_message_object">SEND MESSAGE (OBJECT)</string>
 </resources>

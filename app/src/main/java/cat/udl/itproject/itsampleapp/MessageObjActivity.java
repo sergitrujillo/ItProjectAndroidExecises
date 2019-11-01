@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MessageActivity extends AppCompatActivity {
+public class MessageObjActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,10 +15,10 @@ public class MessageActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         TextView tvMessage = findViewById(R.id.message);
-        if (intent.hasExtra(SendMessageActivity.EXTRA_MESSAGE)) {
+        if (intent.hasExtra(SendMessageObjActivity.EXTRA_MESSAGE_OBJECT)) {
 
-            String message = intent.getStringExtra(SendMessageActivity.EXTRA_MESSAGE);
-            tvMessage.setText(message);
+            Message message = (Message) intent.getSerializableExtra(SendMessageObjActivity.EXTRA_MESSAGE_OBJECT);
+            tvMessage.setText(message.getmTitle() + " - " + message.getmContent());
         }
     }
 }

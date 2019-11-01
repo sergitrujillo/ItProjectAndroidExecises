@@ -9,10 +9,15 @@
     tools:context=".MainIntentsActivity">
 
     <Button
-        android:id="@+id/btnSendMessage"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/send_message"
         android:onClick="sendMessage"
-       />
+        android:text="@string/send_message" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="sendMessageObj"
+        android:text="@string/send_message_object" />
 </LinearLayout>

@@ -18,4 +18,9 @@ public class MainIntentsActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), SendMessageActivity.class);
         startActivity(intent);
     }
+
+    public void sendMessageObj(View view) {
+        Intent intent = new Intent(getApplicationContext(), SendMessageObjActivity.class);
+        startActivity(intent);
+    }
 }

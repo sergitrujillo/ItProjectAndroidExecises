@@ -11,7 +11,7 @@ import android.widget.TextView;
 public class SendMessageActivity extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "cat.udl.itproject.itsampleapp.MESSAGE";
-    public static final String EXTRA_MESSAGE_OBJECT = "cat.udl.itproject.itsampleapp.MESSAGEOBJECT";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,13 +20,11 @@ public class SendMessageActivity extends AppCompatActivity {
     }
 
     public void sendMessage(View view){
-        EditText etTitle = findViewById(R.id.etTitle);
+
         EditText etMessage = findViewById(R.id.etMessage);
-        String title = etTitle.getText().toString();
-        String content = etMessage.getText().toString();
-        Message message = new Message(title,content);
+        String message = etMessage.getText().toString();
         Intent intent = new Intent(getApplicationContext(), MessageActivity.class);
-        intent.putExtra(EXTRA_MESSAGE_OBJECT, message);
+        intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
 
     }
