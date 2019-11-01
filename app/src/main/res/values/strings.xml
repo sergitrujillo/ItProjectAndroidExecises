@@ -32,4 +32,16 @@
     <string name="openUrlWeb">OPEN URL WEB</string>
     <string name="androidWeb">http://developer.android.com</string>
     <string name="openMap">OPEN MAP</string>
+    <string-array name="arrayNumber">
+        <item>Number - 1</item>
+        <item>Number - 2</item>
+        <item>Number - 3</item>
+        <item>Number - 4</item>
+        <item>Number - 5</item>
+        <item>Number - 6</item>
+        <item>Number - 7</item>
+        <item>Number - 8</item>
+        <item>Number - 9</item>
+        <item>Number - 10</item>
+    </string-array>
 </resources>

@@ -3,6 +3,7 @@
     package="cat.udl.itproject.itsampleapp">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,12 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GetNumberActivity"></activity>
+        <activity android:name=".MainIntentsActivity"></activity>
+        <activity android:name=".GetNumberActivity" />
         <activity android:name=".MessageActivity" />
         <activity android:name=".MessageObjActivity" />
         <activity android:name=".SendMessageActivity" />
         <activity android:name=".SendMessageObjActivity" />
-        <activity android:name=".MainIntentsActivity">
+        <activity android:name=".AdaptersActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
